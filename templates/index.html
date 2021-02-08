@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>Flask</title>
-        <style>body {padding: 10px;}</style>
-    </head>
-    <body>
-        <h1>Hello {{ name }}</h1>
-        {% for enemy in enemies %}
-            <p>{{enemy + "が出現した！"}}</p>
-        {% endfor %}
-    </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Hello {{ name }}</h1>
+  {% for enemy in enemies %}
+    <p>{{enemy + "が出現した！"}}</p>
+  {% endfor %}
+{% endblock %}
