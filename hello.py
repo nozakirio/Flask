@@ -3,7 +3,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return render_template("index.html")
+    name = "piyo"
+    enemies = ["スライム", "モンスター", "ドラゴン"]
+    return render_template("index.html", name = name, enemies = enemies)
 
 @app.route("/info")
 def info():
