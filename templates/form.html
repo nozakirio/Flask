@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>投稿フォーム</h1>
+<form action="/result" method="post">
+  <label for="title">タイトル</label>
+  <input type="text" name="title">
+  <p></p>
+  <label for="comment">コメント</label>
+  <input type="text" name="comment">
+  <button type="submit">送信</button>
+</form>
+
+{% endblock %}

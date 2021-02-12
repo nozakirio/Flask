@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>検索フォーム</h1>
+<form action="/search" method="get">
+  <label for="words">ワード</label>
+  <input type="text" name="words">
+  <button type="submit">検索</button>
+</form>
+<p>{{ words }}</p>
+{% endblock %}
