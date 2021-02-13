@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>投稿一覧</h1>
-    <p>{{ title }} {{ comment }}</p>
-    <p><a href="/">メニューに戻る</a></p>
+  <h1>投稿一覧</h1>
+  <p>{{ title }} {{ comment }}</p>
+
+  <table>
+    <tr><th>タイトル</th><th>コメント</th></tr>
+      {% for post in posts: %}
+        {% set column = post.rstrip().split(",") %}
+        <tr>
+            {% for item in column: %}
+              <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+      {% endfor %}
+  </table>
+  <p><a href="/">メニューに戻る</a></p>
 {% endblock %}
